@@ -1,0 +1,34 @@
+#include <cs50.h>
+#include <stdio.h>
+//Declare integer
+int main(void)
+{
+    int height;
+   //Make a loop with asking the number
+    do
+    {
+    height = get_int("height: ");
+}
+//make a condition for the loop
+    while (height < 1 || height > 8);
+    //Declare integers for loops
+int i, j;
+//Start the outer loop
+for (i = 0; i < height; i++)
+{
+  //Start the inner loop
+    for (j = 0; j < height; j++)
+    {
+      //Make a condition for printing
+        if (j + i < height - 1)
+        {
+                printf(" ");
+         }
+         else
+         {
+            printf("#");
+            }
+    }
+    printf("\n");
+}
+}
